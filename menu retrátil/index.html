@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- Desenvolvido por Mayra Sales-->
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title> Menu Retrátil </title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel='stylesheet' href='https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'><link rel="stylesheet" href="./style.css">
+    <script src="http://mds045421.mds.net/snas/minha_redesuas/js/includeHTML.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="detalhes-logo">
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="#">
+          <i class='fas fa-home' id="btn"></i>
+          <span class="nome_links">Página Inicial</span>
+        </a>
+      </li>
+      <li>
+       <a href="#">
+         <i class='fas fa-bullhorn' ></i>
+         <span class="nome_links">Brasil</span>
+       </a>
+     </li>
+     <li>
+       <a href="#">
+         <i class='fas fa-desktop' ></i>
+         <span class="nome_links">Minha Rede</span>
+       </a>
+     </li>
+     <li>
+       <div class="menu-folder drop-menu">
+        <div class="menu-folder"><a class="menu-item" href="javascript: void(0)"><span class="icon"></i></span></a>
+           <a href="#">
+             <i class='fas fa-clipboard' >
+             <span class="nome_links">Gestão</span>
+             <span class = "fas fa-angle-down" aria-hidden="true">
+                </i>
+            </span>
+           </a>
+       </div>
+     </li>
+
+     <li>
+       <a href="#">
+         <i class='fas fa-book-reader' ></i>
+         <span class="nome_links">Acesso à Informação</span>
+       </a>
+     </li>
+     <li>
+       <a href="#">
+         <i class='fas fa-chart-line' ></i>
+         <span class="nome_links">Pactuações</span>
+       </a>
+     </li>
+     <li>
+       <a href="#">
+         <i class='fas fa-check-double' ></i>
+         <span class="nome_links">Orientações</span>
+       </a>
+     </li>
+     <li>
+       <a href="#">
+         <i class='fas fa-laptop-code' ></i>
+         <span class="nome_links">Administração</span>
+       </a>
+     </li>
+     <li>
+      <a href="#">
+        <i class='fas fa-ellipsis-h' ></i>
+        <span class="nome_links">Institucional</span>
+      </a>
+  </div>
+
+  <section class="home-section">
+      
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+  searchBtn.addEventListener("click", ()=>{ 
+    sidebar.classList.toggle("open");
+    menuBtnChange(); 
+  });
+
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+  </script>
+
+<script src='https://www.gov.br/ds/assets/govbr-ds-dev-core/dist/core-init.js'></script>
+<!-- #### Incluir rodapé #### -->
+<div w3-include-html="http://mds045421.mds.net/snas/minha_redesuas/view/config/footer.html"></div>
+<!-- #### Incluir rodapé fim #### -->
+
+<script src="http://mds045421.mds.net/snas/minha_redesuas/js/jquery-3.5.1.slim.min.js"></script>
+  <script src="http://mds045421.mds.net/snas/minha_redesuas/js/bootstrap.bundle.min.js"></script>
+  <script src="http://mds045421.mds.net/snas/minha_redesuas/js/mdb.min.js"></script>
+  <script> includeHTML(); </script>
+
+</body>
+</html>
